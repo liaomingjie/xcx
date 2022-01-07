@@ -1,0 +1,7 @@
+<view class="header">
+  <view class="title">{{title}}</view>
+  <view class="headerText">
+    <text class="textLeft">{{content}}</text>
+    <text class="textRight">查看更多</text>
+  </view>
+</view>

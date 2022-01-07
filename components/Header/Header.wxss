@@ -1,0 +1,19 @@
+.header .title{
+  color: #aaa;
+  line-height: 80rpx;
+}
+
+.header .headerText{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .headerText .textRight{
+  font-size: 28rpx;
+  border: 1rpx solid #aaa;
+  width: 150rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+}

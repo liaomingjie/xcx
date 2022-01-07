@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/video/video",
+    "pages/center/center",
+    "pages/login/login"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "谷粒云音乐"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/images/tabs/tab-home.png",
+        "selectedIconPath": "./static/images/tabs/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath": "./static/images/tabs/select.png",
+        "selectedIconPath": "./static/images/tabs/selected.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心",
+        "iconPath": "./static/images/tabs/tab-my.png",
+        "selectedIconPath": "./static/images/tabs/tab-my-current.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap38.json",
+  "requiredBackgroundModes": ["audio", "location"],
+
+  "subpackages": [
+    {
+      "root": "package",
+      "name":"zhaoliying",
+      "pages": [
+        "pages/detail/detail",
+        "pages/recommend/recommend"
+      ],
+      "independent": true
+    }
+  ],
+
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": ["zhaoliying"]
+    }
+  }
+}

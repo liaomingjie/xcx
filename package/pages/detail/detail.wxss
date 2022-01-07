@@ -1,0 +1,136 @@
+@import '../../../static/iconfont/iconfont.wxss';
+page{
+  height: 100%;
+}
+.detailContainer{
+  height: 100%;
+  background-color: #aaa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detailContainer .songName{
+  color: #fff;
+}
+
+.detailContainer .needle{
+  position: relative;
+  width: 280rpx;
+  height: 300rpx;
+  z-index: 99;
+}
+
+.detailContainer .needle .needleImg{
+  position: absolute;
+  left: 92rpx;
+  top: 40rpx;
+  width: 280rpx;
+  height: 300rpx;
+  transform: rotate(-20deg);
+  transform-origin: 2rpx  20rpx;
+  transition: transform 1s;
+}
+
+.detailContainer .needle .needleImg.active{
+  transform: rotate(0);
+}
+
+.detailContainer .disc{
+  position: relative;
+  width: 600rpx;
+  height: 600rpx;
+  margin-top: -140rpx;
+  
+}
+
+@keyframes move{
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.detailContainer .disc.active{
+  animation: move 8s linear infinite;
+}
+
+
+
+
+.detailContainer .disc .discImg{
+  width: 600rpx;
+  height: 600rpx;
+}
+
+.detailContainer .disc .songImg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 50%;
+}
+
+
+/* 底部控制区域 */
+.musicControl {
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+  border-top: 1rpx solid #fff;
+  width: 100%;
+  display: flex;
+
+}
+
+.musicControl  text {
+  width: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 50rpx;
+}
+
+.musicControl  text.big{
+  font-size: 80rpx;
+}
+
+
+.progress{
+  display: flex;
+  align-items: center;
+}
+
+.progress .progressBar{
+  position: relative;
+  width: 450rpx;
+  height: 4rpx;
+  background-color: white;
+  margin: 0 20rpx;
+}
+
+.progress .progressBar .currentProgressBar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 4rpx;
+  background-color: red;
+}
+
+.progress .progressBar .currentProgressBar .circle{
+  position: absolute;
+  right: -10rpx;
+  top: -8rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: yellowgreen;
+}
